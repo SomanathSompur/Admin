@@ -1,0 +1,218 @@
+***************** Address MS *****************
+
+User Story 1 : Add a New Address
+
+Description:
+As a user, I want to be able to create,update or delete a new address so that I can maintain 
+accurate and up-to-date location information.
+
+Acceptance Criteria:
+
+1. On the "Manage Addresses" page, there should be an option to "Add New Address."
+  (There should be a clear "Add New Address" button in my account settings.)
+
+* Test Scenarios:
+-- Verify the presence of "Manage Addresses" section is visible.
+-- Validate that clicking the "Add New Address" button leads to the expected action or view.
+-- Confirm that the "Add New Address" button is accessible to users with disabilities.
+-- Validate that the "Add New Address" button has appropriate styling for visibility.
+-- Confirm that the "Add New Address" button is only accessible to authenticated 
+
+2. The address creation should adhere to the defined data schema, including required fields 
+  such as Street Address, City, State, Postal Code, and Country.
+  (I should fill in details like street address, city, state, postal code, and country.)
+
+* Test Scenarios:
+-- Ensure that the system allows the creation of an address with all required fields filled in correctly.
+-- Test the system's response when attempting to create an address with a missing required field.
+-- Validate the system's handling of an address creation attempt with an invalid postal code format.
+-- Test the system's validation of the state abbreviation field.
+-- Ensure that the system requires a valid country selection for address creation.
+-- Special Characters in Address Fields
+
+3. Upon successful creation, the system should respond with a confirmation message and the 
+  details of the newly created address.The newly created address should be added to the system's 
+  address catalog.
+  (After clicking 'Save,' the new address should appear in my list of addresses.)
+
+* Test Scenarios:
+-- Successful Address Creation Confirmation
+-- Confirm that the system's address catalog is updated with the newly created address after a 
+    successful creation.
+-- Ensure that the system handles and provides appropriate feedback when an invalid 
+    address is submitted.
+-- Check the content and format of the confirmation message after a successful address creation.
+-- Test the system's ability to handle the creation of multiple addresses.
+
+4. If the address data is incomplete or contains errors, the system should respond with 
+  appropriate error messages guiding the user on necessary corrections.
+
+* Test Scenarios:
+-- Verify that the system provides an appropriate error message when attempting to save an 
+    address with a missing required field.
+-- Test the system's response when attempting to save an address with multiple missing 
+    required fields.
+-- Validate that the system responds with an error message for an invalid postal 
+-- Ensure that the system responds with an error message for an invalid state abbreviation.
+-- Test the system's response when attempting to save an address without selecting a country.
+-- Validate that the system responds with an error message for special characters in address fields.
+
+************************************************************************
+
+User Story 2 : View List of Addresses
+
+Description:
+As a user, I want to view the list of delivery addresses associated with my account.
+
+Acceptance Criteria:
+
+1.There should be a dedicated "Manage Addresses" section accessible from the user
+account settings.
+
+* Test Scenarios:
+-- Ensure that there is a dedicated "Manage Addresses" section accessible from the 
+    user account settings.
+-- Confirm that the "Manage Addresses" section is accessible only to authenticated users.
+-- Test the functionality of navigating to the "Manage Addresses" section from the 
+    user account settings.
+-- Ensure that the link to the "Manage Addresses" section is consistently located within 
+    the user account settings.
+-- Validate that the "Manage Addresses" section contains relevant information and 
+    options for managing addresses.
+-- Confirm that users have the necessary permissions to manage addresses in the 
+    "Manage Addresses" section.
+
+2.The user should see a clear and organized list of all their saved addresses.
+
+* Test Scenarios:
+-- Ensure that the user sees a clear and organized list of all their saved addresses.
+-- Validate that the list of saved addresses is organized in a clear and logical manner.
+-- Confirm that each address in the list displays relevant information.
+-- Ensure that the addresses are displayed in a user-friendly format.
+-- Confirm that the list of addresses is displayed correctly on various devices.
+-- Validate that users can interact with each address entry in the list.
+-- Test the search functionality to find specific addresses within the list.
+
+3 .Each address entry should display essential information, such as the full address and
+an option to edit or delete.
+
+* Test Scenarios:
+-- Ensure that each address entry displays essential information, such as the full address.
+-- Confirm that each address entry provides an option to edit.
+-- Validate that each address entry provides an option to delete.
+-- Test the functionality of the "Edit" option for each address entry.
+-- Validate that the system prompts for confirmation before deleting an address.
+-- Ensure that an address is successfully deleted when the user confirms the deletion.
+-- Validate that the system allows the user to cancel the deletion process.
+-- Test the system's ability to update address information.
+
+************************************************************************
+
+User Story 3 : Set Default Address
+
+Description:
+As a user, I want to set one of my addresses as the default delivery address to simplify the
+checkout process.
+
+Acceptance Criteria:
+
+1.During the address management process, there should be an option to "Set as Default"
+  for each address.
+
+* Test Scenarios:
+-- Ensure that there is a visible and accessible "Set as Default" option for each address 
+   during the address management process.
+-- Validate that one address can be initially set as the default.
+-- Test the system's ability to change the default address.
+-- Ensure that the system displays a confirmation message when an address is set as the default.
+-- Validate that there is a visual indication in the UI to distinguish the default address.
+-- Confirm that the default setting remains consistent after page reload or navigation.
+-- Test the system's response when attempting to set multiple addresses as default.
+-- Validate that the default setting can be unset for an address.
+
+2.The user can choose one address as the default.
+
+* Test Scenarios:
+-- Ensure that the user can choose an initial address as the default.
+-- Test the user's ability to change the default address.
+-- Ensure that the system displays a confirmation message when the user chooses an address 
+   as the default.
+-- Validate that there is a visual indication in the UI to distinguish the default address.
+-- Confirm that the default setting remains consistent after page reload or navigation.
+-- Validate that the user can unset the default setting for an address.
+-- Test the system's response when the user tries to select multiple addresses as the default.
+-- Confirm that the user can choose to have no default address.
+
+3.The default address should be automatically selected during the checkout process,
+streamlining the order placement.
+
+* Test Scenarios: 
+-- Ensure that the default address is automatically selected during the checkout process.
+-- Confirm that the system displays a confirmation message or visual indication when the 
+   default address is automatically selected.
+-- Test the successful placement of an order using the default address.
+-- Validate that the user can change the selected address during the checkout process if needed.
+-- Test the system's behavior when the user does not have a default address.
+-- Validate that the system performs address validation when automatically selecting the 
+   default address during checkout.
+-- Confirm that the default address remains consistent during the checkout process.
+-- Validate that the system provides feedback when the user changes the selected address 
+    during checkout.
+
+============================================================================
+
+***************** Cart MS *****************
+
+User Story 1 : Add Item to Cart
+
+Description:
+As a user, I want to add items to my shopping cart, so I can review and proceed to purchase them.
+
+Acceptance Criteria:
+
+1.The user should be able to add the product to the cart
+  (Each product should have an "Add to Cart" button.)
+2.Clicking the "Add to Cart" button should update the contents of the user's shopping cart.
+  (Clicking the button adds the item to my cart with the default quantity of 1.)
+3.The shopping cart should display the added items, including their names, quantities, and prices.
+  (If the item is already in the cart, the quantity should increment by 1.)
+
+************************************************************************
+
+User Story 2 : View and Modify Cart Contents
+
+Description:
+As a user, I want to view the contents of my shopping cart and have the ability to modify the 
+quantity or remove items.
+
+Acceptance Criteria:
+
+1.There should be a "View Cart" option accessible from the user interface.
+  (There should be a "View Cart" button accessible from any page.)
+2.The "View Cart" page should display a list of items in the cart, including names, quantities, 
+  prices, and a total.
+  (In the cart view, I see a list of items with their names, quantities, and prices.)
+3.Users should have the option to increase, decrease, or remove items from the cart.
+  (For each item, I can easily adjust the quantity or remove it from the cart.)
+4.The total price should update dynamically based on the changes made.
+
+************************************************************************
+
+User Story 3 : Checkout Process
+
+Description:
+As a user, I want a straightforward checkout process to complete my purchase efficiently.
+
+Acceptance Criteria:
+
+1.There should be a "Checkout" button on the "View Cart" page.
+  (There should be a prominent "Checkout" button in the cart view.)
+2.Clicking the "Checkout" button should redirect the user to a checkout page.
+  (During checkout, I enter or confirm my delivery address.)
+3.The checkout page should display a summary of the order, including items, quantities, 
+  and the total price.
+  (I can review the order summary, including item details and total price.)
+4.Users should be prompted to enter shipping and payment information.
+  (I provide payment details and complete the purchase with a single click.)
+5.After completing the checkout process, the user should receive a confirmation of the order.
+
