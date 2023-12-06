@@ -1,0 +1,111 @@
+
+User Story: Implementing DB - SQL on AWS Micro Service for Online Shopping App
+
+Title: Developing Database Micro Service for Seamless Integration
+
+As a software developer tasked with backend development for our online shopping app,
+
+I want to create a robust DB - SQL on AWS Micro Service,
+
+So that we can efficiently manage and organize data for all essential micro services, laying the foundation for a scalable and integrated system.
+
+1. Endpoint for Storing User Information: (Users Micro Service)
+
+The DB - SQL on AWS Micro Service should provide an endpoint to store user details received from the Users Micro Service.
+User data may include information like user ID, name, email, and encrypted passwords for authentication.
+
+Acceptance Criteria:
+* The micro service should provide an endpoint (/users) to accept and store user information.
+* Valid user details, including but not limited to username, email, and password, should be stored securely in the database.
+* The response status code for a successful operation should be 201 (Created).
+
+
+2. Endpoint for Managing Product Stocks: (Stocks Micro Service)
+
+Develop endpoints to handle the addition, update, and retrieval of stock information received from the Stocks Micro Service.
+Ensure that stock information is efficiently stored and can be easily queried.
+
+Acceptance Criteria:
+* An endpoint (/stocks) should be available to manage product stocks.
+* It should support the addition, update, and retrieval of stock information.
+* Real-time stock information for a specific product should be accessible through an endpoint (/stocks/{productId}).
+* Responses for successful operations should have appropriate status codes (e.g., 201 for creation, 200 for successful update or retrieval).
+
+
+3. Endpoint for Processing Orders: (Orders Micro Service)
+
+Create endpoints to manage order information received from the Orders Micro Service.
+This includes storing order details, updating order statuses, and retrieving order history.
+
+Acceptance Criteria:
+* The micro service should expose an endpoint (/orders) for processing orders.
+* It should support the creation of new orders and the updating of order statuses.
+* Order history for a user should be retrievable via an endpoint (/orders/history/{userId}).
+* Responses for successful operations should have appropriate status codes.
+
+
+4. Endpoint for Address Information: (Address Micro Service)
+
+Implement endpoints for storing and retrieving user addresses from the Address Micro Service.
+Address information should be linked to user profiles for accurate order processing.
+
+Acceptance Criteria:
+* The micro service should have an endpoint (/addresses) for storing and retrieving user addresses.
+* Address information should include details like street, city, and postal code.
+* Responses for successful operations should have appropriate status codes.
+
+
+5. Endpoint for Cart Management: (Cart Micro Service)
+
+Develop endpoints to handle shopping cart information received from the Cart Micro Service.
+Ensure that the cart data is stored securely and can be easily updated as users add or remove items.
+
+Acceptance Criteria:
+* An endpoint (/carts) should be available for managing shopping carts.
+* It should allow the storage and retrieval of shopping cart information.
+* The current shopping cart for a user should be retrievable via an endpoint (/carts/{userId}).
+* Responses for successful operations should have appropriate status codes.
+
+
+6. Endpoint for Search Queries: (Search Micro Service)
+
+Create endpoints to store and retrieve product information received from the Search Micro Service.
+Optimize queries for efficient product search functionality.
+
+Acceptance Criteria:
+* The micro service should support a search endpoint (/products/search?q={query}) for product queries.
+* Product details, including name, description, and category, should be searchable and retrievable.
+* Responses for successful operations should have appropriate status codes.
+
+
+7. Endpoint for Authentication: (Auth Micro Service)
+
+Integrate with the Auth Micro Service to ensure secure access to the DB - SQL on AWS Micro Service endpoints.
+Implement token-based authentication to validate requests.
+
+Acceptance Criteria:
+* The micro service should provide endpoints for user authentication, including login (/auth/login) and logout (/auth/logout).
+* Successful login should generate an authentication token, and successful logout should invalidate the token.
+* Responses for successful operations should have appropriate status codes.
+
+
+8. Endpoint for Invoice Generation: (Invoice Micro Service)
+
+Develop endpoints to store and retrieve invoice details from the Invoice Micro Service.
+Ensure that invoices are associated with the corresponding orders.
+
+Acceptance Criteria:
+* The micro service should expose an endpoint (/invoices) for generating and retrieving invoices.
+* Invoice details, including order ID and total amount, should be stored securely.
+* Responses for successful operations should have appropriate status codes.
+
+
+9. Error Handling and Logging:
+
+Implement robust error handling mechanisms to provide clear and meaningful error messages.
+Set up logging to capture relevant information for debugging and monitoring purposes.
+
+Acceptance Criteria:
+* The micro service should handle errors gracefully and provide meaningful error responses.
+* Detailed logs should be maintained to aid in debugging and monitoring.
+* Responses for error scenarios should have appropriate status codes (e.g., 400 for bad requests, 404 for not found).
